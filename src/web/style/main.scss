@@ -1,0 +1,42 @@
+.app-name {
+  font-size: 27px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(247, 59, 59);
+  animation-name: app-title;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes app-title {
+  0% {
+    color: rgb(255, 53, 53);
+  }
+  50% {
+    color: rgb(85, 190, 250);
+  }
+  100% {
+    color: rgb(255, 53, 53);
+  }
+}
+.big-font {
+  font-size: 20px;
+  animation-name: text-display;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes text-display {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+iframe {
+  margin-left: 1.5%;
+}
+
+.movieTitle{
+  line-height: 0px;
+}

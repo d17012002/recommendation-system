@@ -1,0 +1,4 @@
+src/web/node_modules
+src/main/.ipynb_checkpoints
+src/web/modelled-data/movies_list.pkl
+src/web/modelled-data/similarity.pkl
