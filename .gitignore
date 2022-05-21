@@ -3,3 +3,4 @@ src/main/.ipynb_checkpoints
 src/web/modelled-data/movie_list.pkl
 src/web/modelled-data/similarity.pkl
 src/web/__pycache__
+src/web/components/__pycache__
