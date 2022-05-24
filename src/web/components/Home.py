@@ -13,7 +13,7 @@ upcoming_movies = """
 <iframe width="350" height="215" src="https://www.youtube.com/embed/6AvFHlKS6OE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 """
-app_description = '<p class="big-font">Pellentesque ornare quam id risus vulputate efficitur. Donec eleifend dictum ipsum sit amet auctor. Vivamus volutpat sapien eget justo bibendum varius. Nulla pharetra placerat nulla, ac condimentum lectus blandit eget. Ut varius rutrum lectus, sit amet aliquet sapien condimentum sed.</p><br>'
+app_description = '<p class="big-font">Welcome to our recommendation service of finding similar movies, which will help you in choosing the next movie or TV show. Discover the top, most popular movies available now! Across theaters, streaming, and on-demand.</p><br>'
 
 
 #-----Use local css--------#

@@ -84,11 +84,11 @@ def suggest(movie):
     return recommended_movies, recommended_movies_data
 
 
-movie_description = '<p class="big-font">Donec eleifend dictum ipsum sit amet auctor. Vivamus volutpat sapien eget justo bibendum varius. Nulla pharetra placerat nulla, ac condimentum lectus blandit eget. Ut varius rutrum lectus, sit amet aliquet sapien condimentum sed.</p><br>'
+movie_description = "<p class='big-font'>Rather than wasting time searching through categories, we've made it as simple as possible for you to find the perfect movie to watch. Select your favourite movie and get instead recommendation. Feel free to start tackling the list with whatever is the most interesting to you first…or just start at the top and work your way down. We think you’ll have fun either way.</p><br>"
 
 def movie():
     with st.container():
-        st.write("###")
+        st.write("###") 
         st.subheader("Get all your favourite movies here...")
         st.markdown(movie_description, unsafe_allow_html=True)
         movie_display_list = []
@@ -145,7 +145,7 @@ def explore_suggest(movie):
         recommended_movies_data.append(Explore.fetch_poster_explore(movie_id))
     return recommended_movies, recommended_movies_data
 
-explore_description = '<p class="big-font">Vivamus volutpat sapien eget justo bibendum varius. Nulla pharetra placerat nulla, ac condimentum lectus blandit eget. Ut varius rutrum lectus, sit amet aliquet sapien condimentum sed.</p><br>'
+explore_description = "<p class='big-font'>Our purpose in this space is to give a unique service in the form of a list of the finest films now streaming on Weflix, so you may find a pleasing film without wasting time scrolling endlessly. One note: the movies suggested here are dependent on your search history; once you clean your search history, all suggestions will be erased.</p><br>"
 
 def delete_message():
     st.write("---")
