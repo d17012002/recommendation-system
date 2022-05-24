@@ -146,19 +146,36 @@ def explore_suggest(movie):
     return recommended_movies, recommended_movies_data
 
 explore_description = '<p class="big-font">Vivamus volutpat sapien eget justo bibendum varius. Nulla pharetra placerat nulla, ac condimentum lectus blandit eget. Ut varius rutrum lectus, sit amet aliquet sapien condimentum sed.</p><br>'
+
+def delete_message():
+    st.write("---")
+    st.info("Oops! It seems you have no interactions yet.")
+    #st.markdown("<p class='big-font'>Oops! It seems you have no interactions yet.</p>",unsafe_allow_html=True)
+
 def explore():
     search_history = db.child("users").get()
     with st.container():
         st.write("###")
         st.subheader("Movies you might like 💖")
         st.markdown(explore_description,unsafe_allow_html=True)
-    if (search_history.val() is not None):     
-        n = len(search_history.val())
-        for i in range(n-1,-1,-1):
-            if(search_history[i].val()["Email_Id"]==email):
-                st.write("Because you liked: "+search_history[i].val()["Searched_movie"])
-                names, data = explore_suggest(search_history[i].val()["Searched_movie"])
-                Explore.display_explore(names,data)
+
+    #clear search history
+    if st.button("Clear History"):
+        temp = db.child("users").get()
+        for i in temp.each(): 
+            if(i.val()["Email_Id"]==email):
+                db.child("users").child(i.key()).remove()
+        delete_message()
+
+    else:
+        st.write("---")
+        if (search_history.val() is not None):     
+            n = len(search_history.val())
+            for i in range(n-1,-1,-1):
+                if(search_history[i].val()["Email_Id"]==email):
+                    st.write("Because you liked: "+search_history[i].val()["Searched_movie"])
+                    names, data = explore_suggest(search_history[i].val()["Searched_movie"])
+                    Explore.display_explore(names, data)
                 
 
 #-------- Navbar -------------#
