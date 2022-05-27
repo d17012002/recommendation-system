@@ -161,11 +161,12 @@ def explore():
 
     #clear search history
     if st.button("Clear History"):
-        temp = db.child("users").get()
-        for i in temp.each(): 
-            if(i.val()["Email_Id"]==email):
-                db.child("users").child(i.key()).remove()
-        delete_message()
+        if (search_history.val() is not None):
+            temp = db.child("users").get()
+            for i in temp.each(): 
+                if(i.val()["Email_Id"]==email):
+                    db.child("users").child(i.key()).remove()
+            delete_message()
 
     else:
         st.write("---")
