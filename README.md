@@ -1,5 +1,7 @@
 # Recommendation System
-  
+
+Movie recommendation engine is a machine learning project which recommends user various movies based on what user has searched. The machine learning model calculates the similarity score between the movies using tags and based on that most similar movies are recommended.
+
 Version - 0.0  
 Base Architecture
 
