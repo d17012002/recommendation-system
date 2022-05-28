@@ -21,3 +21,9 @@ https://user-images.githubusercontent.com/81901470/170809996-eac5a027-7c1e-4b10-
 - Now open a terminal in `src>main` directory or you can simply open the folder inside vscode and open the integrated terminal. Then run `jupyter notebook`.
 - Once your jupyter notebook is ready. Open `Machine_Learning_Project.ipynb` file and run all cells.
 - voila!!:fire::fire: your modelled data is created and ready to use.
+- Demo Video:
+
+
+
+https://user-images.githubusercontent.com/81901470/170836279-56bff5a2-a4be-4786-89bf-75dfb3772612.mp4
+
