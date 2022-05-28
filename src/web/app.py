@@ -7,12 +7,14 @@ import components.Navbar as Nav
 import components.Movie as Movie
 import components.Sorting as Sorting
 import components.Explore as Explore
-from pyrebase import pyrebase
+from firebase import Firebase
 
 st.set_page_config(page_title="WeFlix", layout="wide")
 
 # Firebase Authentication
-firebase = pyrebase.initialize_app(firebaseDB.firebaseConfig)
+
+firebase = Firebase(firebaseDB.firebaseConfig)
+
 auth = firebase.auth()
 
 # Database
@@ -171,11 +173,10 @@ def explore():
     else:
         st.write("---")
         if (search_history.val() is not None):     
-            n = len(search_history.val())
-            for i in range(n-1,-1,-1):
-                if(search_history[i].val()["Email_Id"]==email):
-                    st.write("Because you liked: "+search_history[i].val()["Searched_movie"])
-                    names, data = explore_suggest(search_history[i].val()["Searched_movie"])
+            for i in reversed(search_history.each()):
+                if(i.val()["Email_Id"]==email):
+                    st.write("Because you liked: "+i.val()["Searched_movie"])
+                    names, data = explore_suggest(i.val()["Searched_movie"])
                     Explore.display_explore(names, data)
                 
 
@@ -187,7 +188,7 @@ if choice == 'Login':
             st.error("Invalid email and password. Please try again")
 
         user = auth.sign_in_with_email_and_password(email, password)
-
+        
         selected = Nav.navbar()
         if selected == "Home":
             Home.home()
