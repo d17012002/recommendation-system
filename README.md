@@ -13,7 +13,11 @@ Base Architecture
 - Now open a browser and go to `localhost:8501` and voila!!:fire::fire:
 -Demo Video:
 
-https://user-images.githubusercontent.com/81901470/170809996-eac5a027-7c1e-4b10-95b6-622d2d4b64c8.mp4
+
+
+https://user-images.githubusercontent.com/81901470/170836366-547ba09e-715b-4b0d-bd1c-e56767ec5e05.mp4
+
+
 
 ## Model Training
 
@@ -24,6 +28,8 @@ https://user-images.githubusercontent.com/81901470/170809996-eac5a027-7c1e-4b10-
 - Demo Video:
 
 
+https://user-images.githubusercontent.com/81901470/170836402-9660245d-5d45-44a6-bcb9-77e4f010db11.mp4
 
-https://user-images.githubusercontent.com/81901470/170836279-56bff5a2-a4be-4786-89bf-75dfb3772612.mp4
+
+
 
