@@ -35,5 +35,5 @@ https://user-images.githubusercontent.com/81901470/170836366-547ba09e-715b-4b0d-
 https://user-images.githubusercontent.com/81901470/170836402-9660245d-5d45-44a6-bcb9-77e4f010db11.mp4
 
 
-
+Initially it may take some time to load the website.
 Hosted Link: https://weflix.herokuapp.com/
